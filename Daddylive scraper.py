@@ -142,12 +142,12 @@ delete_file_if_exists('tvg-ids.txt')
 epgs = [
     {'filename': 'epgShare1.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz'},
     {'filename': 'epgShare2.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS2.xml.gz'},
-    # {'filename': 'epgShare3.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_CA1.xml.gz'},
-    # {'filename': 'epgShare4.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz'},
-    # {'filename': 'epgShare5.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz'},
-    # {'filename': 'epgShare6.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_IE1.xml.gz'},
-    # {'filename': 'epgShare7.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz'},
-    # {'filename': 'epgShare8.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_ZA1.xml.gz'},
+    {'filename': 'epgShare3.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_CA1.xml.gz'},
+    {'filename': 'epgShare4.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz'},
+    {'filename': 'epgShare5.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz'},
+    {'filename': 'epgShare6.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_IE1.xml.gz'},
+    {'filename': 'epgShare7.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz'},
+    {'filename': 'epgShare8.xml', 'url': 'https://epgshare01.online/epgshare01/epg_ripper_ZA1.xml.gz'},
     {'filename':'bevyCustom.xml','url':'https://www.bevy.be/generate/8TbvgWSctM.xml.gz'}
 ]
 
