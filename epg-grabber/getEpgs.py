@@ -48,11 +48,16 @@ def filter_and_build_epg(urls):
         for programme in epg_data.findall('programme'):
             tvg_id = programme.get('channel')
             if tvg_id in valid_tvg_ids:
-                title = programme.find('title').text
-                if title == 'NHL Hockey' or title == 'Live: NFL Football':
-                    subtitle = programme.find('sub-title').text
-                    programme.find('title').text = title + " " + subtitle
-                root.append(programme)
+                title = programme.find('title')
+                if title is not None:
+                    title_text = title.text if title is not None else 'No title'
+
+                    if title_text == 'NHL Hockey' or title_text == 'Live: NFL Football':
+                        subtitle = programme.find('sub-title')
+                        subtitle_text = subtitle.text if subtitle else 'No subtitle'
+                        programme.find('title').text = title_text + " " + subtitle_text
+
+                    root.append(programme)
 
     tree = ET.ElementTree(root)
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
@@ -62,22 +67,22 @@ def filter_and_build_epg(urls):
         with gzip.open(output_file_gz, 'wb') as f:
             tree.write(f, encoding='utf-8', xml_declaration=True)
         print(f"New EPG saved to {output_file_gz}")
-	    
+
 m3u4u_epg = os.getenv("M3U4U_EPG")
 
 urls = [
-	'https://www.bevy.be/generate/8TbvgWSctM.xml.gz',
-       'https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz',
-        'https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS2.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_CA1.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_IE1.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz',
-	'https://epgshare01.online/epgshare01/epg_ripper_ZA1.xml.gz',
-	'https://epg.pw/api/epg.xml?channel_id=8486',
-	'https://epg.pw/api/epg.xml?channel_id=12358',
-	'https://epg.pw/api/epg.xml?channel_id=9206',
+    'https://www.bevy.be/generate/8TbvgWSctM.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_US1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_US_LOCALS2.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_CA1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_UK1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_AU1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_IE1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_DE1.xml.gz',
+    'https://epgshare01.online/epgshare01/epg_ripper_ZA1.xml.gz',
+    'https://epg.pw/api/epg.xml?channel_id=8486',
+    'https://epg.pw/api/epg.xml?channel_id=12358',
+    'https://epg.pw/api/epg.xml?channel_id=9206',
 ]
 
 if __name__ == "__main__":
