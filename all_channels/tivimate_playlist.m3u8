@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="https://bit.ly/a1xepg"
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz"
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="A.and.E.US.-.Eastern.Feed.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/a-and-e-us.png" tvg-name="A&E",A&E
 https://xyzdddd.mizhls.ru/lb/premium302/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="ABC.(WFAA).Dallas,.TX.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/us-local/abc-8-wfaa-us.png" tvg-name="ABC (WFAA)",ABC (WFAA)
@@ -35,7 +35,7 @@ https://xyzdddd.mizhls.ru/lb/premium372/index.m3u8|Referer=https://cookiewebplay
 https://xyzdddd.mizhls.ru/lb/premium491/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
 #EXTINF:-1 tvg-id="beINSports2.au" tvg-name="beIN SPORTS Australia 2" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Bein2.png" group-title="SPORTS (DADDY LIVE)",beIN SPORTS Australia 2
 https://xyzdddd.mizhls.ru/lb/premium492/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
-#EXTINF:-1 tvg-id="beINSports3.au)" tvg-name="beIN SPORTS Australia 3" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Bein3.png" group-title="SPORTS (DADDY LIVE)",beIN SPORTS Australia 3
+#EXTINF:-1 tvg-id="beINSports3.au" tvg-name="beIN SPORTS Australia 3" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Bein3.png" group-title="SPORTS (DADDY LIVE)",beIN SPORTS Australia 3
 https://xyzdddd.mizhls.ru/lb/premium493/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="BET.-.Eastern.Feed.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bet-us.png" tvg-name="BET",BET
 https://xyzdddd.mizhls.ru/lb/premium306/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
@@ -329,7 +329,7 @@ https://xyzdddd.mizhls.ru/lb/premium777/index.m3u8|Referer=https://cookiewebplay
 https://xyzdddd.mizhls.ru/lb/premium778/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="NBC.(WNBC).New.York,.NY.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2077px-NBC_logo.svg.png" tvg-name="NBCNY",NBCNY
 https://xyzdddd.mizhls.ru/lb/premium769/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="NESN.UHD.us" tvg-logo="https://i.postimg.cc/CxVDbJrS/nesn.png" tvg-name="NESN UHD",NESN UHD
+#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="New.England.Sports.Network.HDTV.(NESNHD).us" tvg-logo="https://i.postimg.cc/CxVDbJrS/nesn.png" tvg-name="NESN UHD",NESN UHD
 https://a1xs.vip/4000080|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyzSPORTS (DADDY LIVE)
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="New.England.Sports.Network.HDTV.(NESNHD).us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" tvg-name="NESN",NESN
 https://xyzdddd.mizhls.ru/lb/premium762/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
@@ -431,7 +431,7 @@ https://skylivetab-new.akamaized.net/hls/live/2038780/sky1/index.m3u8|Referer=ht
 https://skylivetab-new.akamaized.net/hls/live/2038781/sky2/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="SkyThoroughbredCentral.au" tvg-logo="https://i.imgur.com/1SxIsnw.png" tvg-name="Sky Thoroughbred Central",Sky Thoroughbred Central
 https://skylivetab-new.akamaized.net/hls/live/2038782/stcsd/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-logo="https://i.ibb.co/gwCk7Bc/sky-m-event-uhd.png" tvg-name="Sky Sports Main Event UHD",UK | Sky Sports Main Event UHD
+#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-logo="https://i.ibb.co/gwCk7Bc/sky-m-event-uhd.png" tvg-name="Sky Sports Main Event UHD" tvg-id="SkySpMainEvHD.uk",UK | Sky Sports Main Event UHD
 https://a1xs.vip/2000015|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="SkySp.ActionHD.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-action-uk.png" tvg-name="Sky Sports Action",Sky Sports Action
 https://xyzdddd.mizhls.ru/lb/premium37/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
@@ -457,7 +457,7 @@ https://xyzdddd.mizhls.ru/lb/premium366/index.m3u8|Referer=https://cookiewebplay
 https://xyzdddd.mizhls.ru/lb/premium130/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="SkySp.Racing.HD.uk" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-racing-uk.png?raw=true" tvg-name="Sky Sports Racing",Sky Sports Racing
 https://xyzdddd.mizhls.ru/lb/premium554/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="SkySp.Tennis.uk" tvg-logo="https://pixvid.org/images/2025/01/21/Sky_Sports_Tennis.png" tvg-name="Sky Sports Tennis",Sky Sports Tennis
+#EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="SkySp.Tennis.HD.uk" tvg-logo="https://pixvid.org/images/2025/01/21/Sky_Sports_Tennis.png" tvg-name="Sky Sports Tennis",Sky Sports Tennis
 https://a1xs.vip/2000013|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="UK (DADDY LIVE)" tvg-id="Sky.Witness.HD.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-witness-uk.png" tvg-name="Sky Witness HD",Sky Witness HD
 https://xyzdddd.mizhls.ru/lb/premium361/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
@@ -641,39 +641,39 @@ https://xyzdddd.mizhls.ru/lb/premium598/index.m3u8|Referer=https://cookiewebplay
 https://xyzdddd.mizhls.ru/lb/premium376/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="YES.Network.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/yes-network-us.png" tvg-name="YES Network",YES Network
 https://xyzdddd.mizhls.ru/lb/premium763/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="ABC.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-au.png" tvg-name="ABC",ABC
+#EXTINF:-1 group-title="Australia" tvg-id="ABCPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-au.png" tvg-name="ABC",ABC
 https://c.mjh.nz/abc-nsw.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="ABCEntertains.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-entertains-au.png" tvg-name="ABC Entertains",ABC Entertains
+#EXTINF:-1 group-title="Australia" tvg-id="ABCEntertainsPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-entertains-au.png" tvg-name="ABC Entertains",ABC Entertains
 https://c.mjh.nz/abc-me.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="ABCFamily.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-family-au.png" tvg-name="ABC Family",ABC Family
+#EXTINF:-1 group-title="Australia" tvg-id="ABCFamilyPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-family-au.png" tvg-name="ABC Family",ABC Family
 https://c.mjh.nz/abc-tv-plus.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="ABCNews.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png" tvg-name="ABC News",ABC News
+#EXTINF:-1 group-title="Australia" tvg-id="ABCNewsPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png" tvg-name="ABC News",ABC News
 https://c.mjh.nz/abc-news.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="Network10.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/network-10-au.png" tvg-name="Network 10",Network 10
+#EXTINF:-1 group-title="Australia" tvg-id="10Perth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/network-10-au.png" tvg-name="Network 10",Network 10
 http://tvhe.neez.id.au/stream/channelid/1703206964?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="10Peach.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/10-peach-comedy-au.png" tvg-name="10 Peach Comedy",10 Peach Comedy
+#EXTINF:-1 group-title="Australia" tvg-id="10PeachPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/10-peach-comedy-au.png" tvg-name="10 Peach Comedy",10 Peach Comedy
 http://tvhe.neez.id.au/stream/channelid/126080995?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="10Bold.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/10-bold-drama-au.png" tvg-name="10 Bold Drama",10 Bold Drama
+#EXTINF:-1 group-title="Australia" tvg-id="10BoldPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/10-bold-drama-au.png" tvg-name="10 Bold Drama",10 Bold Drama
 http://tvhe.neez.id.au/stream/channelid/177421981?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="Australia" tvg-id="Nickelodeon.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nickelodeon-au.png" tvg-name="Nickelodeon",Nickelodeon
 http://tvhe.neez.id.au/stream/channelid/1564037361?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="Nine.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-au.png" tvg-name="Nine",Nine
+#EXTINF:-1 group-title="Australia" tvg-id="9Perth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-au.png" tvg-name="Nine",Nine
 http://tvhe.neez.id.au/stream/channelid/881330051?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="9Go.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-go-au.png" tvg-name="9Go!",9Go!
+#EXTINF:-1 group-title="Australia" tvg-id="9GoPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-go-au.png" tvg-name="9Go!",9Go!
 http://tvhe.neez.id.au/stream/channelid/1440783481?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="9Life.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-life-au.png" tvg-name="9Life",9Life
+#EXTINF:-1 group-title="Australia" tvg-id="9LifePerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-life-au.png" tvg-name="9Life",9Life
 http://tvhe.neez.id.au/stream/channelid/1206278726?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="9Rush.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-rush-au.png" tvg-name="9Rush",9Rush
+#EXTINF:-1 group-title="Australia" tvg-id="9RushPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-rush-au.png" tvg-name="9Rush",9Rush
 http://tvhe.neez.id.au/stream/channelid/1415085761?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="9Gem.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-gem-au.png" tvg-name="9Gem",9Gem
+#EXTINF:-1 group-title="Australia" tvg-id="9GemPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/nine-gem-au.png" tvg-name="9Gem",9Gem
 http://tvhe.neez.id.au/stream/channelid/758254891?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="Seven.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/seven-au.png" tvg-name="7",7
+#EXTINF:-1 group-title="Australia" tvg-id="7Perth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/seven-au.png" tvg-name="7",7
 http://tvhe.neez.id.au/stream/channelid/1539335094?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="7Two.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7two-au.png" tvg-name="7Two",7Two
+#EXTINF:-1 group-title="Australia" tvg-id="7TWOPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7two-au.png" tvg-name="7Two",7Two
 http://tvhe.neez.id.au/stream/channelid/294715339?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="7Mate.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7mate-au.png" tvg-name="7Mate",7Mate
+#EXTINF:-1 group-title="Australia" tvg-id="7matePerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7mate-au.png" tvg-name="7Mate",7Mate
 http://tvhe.neez.id.au/stream/channelid/750052291?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 group-title="Australia" tvg-id="7Flix.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7flix-au.png" tvg-name="7Flix",7Flix
+#EXTINF:-1 group-title="Australia" tvg-id="7flixPerth.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7flix-au.png" tvg-name="7Flix",7Flix
 http://tvhe.neez.id.au/stream/channelid/630621048?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="Australia" tvg-id="7Bravo.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7bravo-au.png" tvg-name="7Bravo",7Bravo
 http://tvhe.neez.id.au/stream/channelid/1013117216?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
