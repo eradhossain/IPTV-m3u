@@ -678,23 +678,25 @@ http://tvhe.neez.id.au/stream/channelid/750052291?profile=pass|Referer=https://c
 http://tvhe.neez.id.au/stream/channelid/630621048?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="Australia" tvg-id="7Bravo.au" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/7bravo-au.png" tvg-name="7Bravo",7Bravo
 http://tvhe.neez.id.au/stream/channelid/1013117216?profile=pass|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.1.nz" tvg-name="SKY Sport 1 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ1.png" group-title="New Zealand",SKY Sport 1 NZ
-https://a1xs.vip/700031|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.2.nz" tvg-name="SKY Sport 2 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ2.png" group-title="New Zealand",SKY Sport 2 NZ
-https://a1xs.vip/700032|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.3.nz" tvg-name="SKY Sport 3 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ3.png" group-title="New Zealand",SKY Sport 3 NZ
-https://a1xs.vip/700033|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.4.nz" tvg-name="SKY Sport 4 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ4.png" group-title="New Zealand",SKY Sport 4 NZ
-https://a1xs.vip/700034|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.5.nz" tvg-name="SKY Sport 5 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ5.png" group-title="New Zealand",SKY Sport 5 NZ
-https://a1xs.vip/700035|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.6.nz" tvg-name="SKY Sport 6 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ6.png" group-title="New Zealand",SKY Sport 6 NZ
-https://a1xs.vip/700036|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SKY.Sport.7.nz" tvg-name="SKY Sport 7 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ7.png" group-title="New Zealand",SKY Sport 7 NZ
-https://a1xs.vip/700037|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 1 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ1.png" group-title="New Zealand",Sky Sport 1 NZ
+https://xyzdddd.mizhls.ru/lb/premium588/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 2 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ2.png" group-title="New Zealand",Sky Sport 2 NZ
+https://xyzdddd.mizhls.ru/lb/premium589/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 3 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ3.png" group-title="New Zealand",Sky Sport 3 NZ
+https://xyzdddd.mizhls.ru/lb/premium590/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 4 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ4.png" group-title="New Zealand",Sky Sport 4 NZ
+https://xyzdddd.mizhls.ru/lb/premium591/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 5 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ5.png" group-title="New Zealand",Sky Sport 5 NZ
+https://xyzdddd.mizhls.ru/lb/premium592/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 6 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ6.png" group-title="New Zealand",Sky Sport 6 NZ
+https://xyzdddd.mizhls.ru/lb/premium593/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport 7 NZ" tvg-logo="https://pixvid.org/images/2025/02/02/SSNZ7.png" group-title="New Zealand",Sky Sport 7 NZ
+https://xyzdddd.mizhls.ru/lb/premium594/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
 #EXTINF:-1 tvg-id="SKY.Sport.8.nz" tvg-name="Sky Sport 8 NZ" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Sky%20New%20Zealand%208.png" group-title="New Zealand",Sky Sport 8 NZ
 https://xyzdddd.mizhls.ru/lb/premium595/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
 #EXTINF:-1 tvg-id="SKY.Sport.9.nz" tvg-name="Sky Sport 9 NZ" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Sky%20New%20Zealand%209.png" group-title="New Zealand",Sky Sport 9 NZ
 https://xyzdddd.mizhls.ru/lb/premium596/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
 #EXTINF:-1 tvg-id="SKY.Sport.Select.nz" tvg-name="Sky Sport Select NZ" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/Sky%20New%20Zealand%20Select.png" group-title="New Zealand",Sky Sport Select NZ
 https://xyzdddd.mizhls.ru/lb/premium587/index.m3u8|Referer="https://ilovetoplay.xyz/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"|Origin="https://ilovetoplay.xyz"
+
+
