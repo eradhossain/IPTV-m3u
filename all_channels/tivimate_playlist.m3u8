@@ -274,14 +274,14 @@ https://xyzdddd.mizhls.ru/lb/premium829/index.m3u8|Referer=https://cookiewebplay
 https://xyzdddd.mizhls.ru/lb/premium646/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="Me.TV.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/me-tv-us.png" tvg-name="METV",METV
 https://xyzdddd.mizhls.ru/lb/premium662/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="MGMplus.us" tvg-name="MGM+" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-us.png?raw=true" group-title="USA (DADDY LIVE)",MGM+
-http://fl2.moveonjoy.com/EPIX/index.m3u8
-#EXTINF:-1 tvg-id="MGMplusDriveIn.us" tvg-name="MGM+ Drive-In" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-drive-in-us.png?raw=true" group-title="USA (DADDY LIVE)",MGM+ Drive-In
-http://fl2.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8
-#EXTINF:-1 tvg-id="MGMplusHits.us" tvg-name="MGM+ HITS" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-hits-us.png?raw=true" group-title="USA (DADDY LIVE)",MGM+ HITS
-http://cdn1host.online:2999/kratorius/opLcbhlXaT/388
-#EXTINF:-1 tvg-id="MGMplusMarquee.us" tvg-name="MGM+ MARQUEE" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-marquee-us.png?raw=true" group-title="USA (DADDY LIVE)",MGM+ MARQUEE
-http://cdn1host.online:2999/kratorius/opLcbhlXaT/132
+#EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="MGM+.HDTV.(East).(MGM+HD).us" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-us.png?raw=true" tvg-name="MGM+",MGM+
+http://fl2.moveonjoy.com/EPIX/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
+#EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="MGM+.Drive-In.(MGM+DI).us" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-drive-in-us.png?raw=true" tvg-name="MGM+ Drive-In",MGM+ Drive-In
+http://fl2.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
+#EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="MGM+.Hits.HDTV.(East).(MGM+HTHD).us" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-hits-us.png?raw=true" tvg-name="MGM+ HITS",MGM+ HITS
+http://cdn1host.online:2999/kratorius/opLcbhlXaT/388|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
+#EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="MGM+.Marquee.HDTV.(East).(MGM+MRQ).us" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-marquee-us.png?raw=true" tvg-name="MGM+ MARQUEE",MGM+ MARQUEE
+http://cdn1host.online:2999/kratorius/opLcbhlXaT/132|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="SPORTS (DADDY LIVE)" tvg-id="MLB.Network.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mlb-network-us.png" tvg-name="MLB Network",MLB Network
 https://xyzdddd.mizhls.ru/lb/premium399/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="Motor.Trend.HD.us" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/motor-trend-us.png" tvg-name="Motor Trend",Motor Trend
@@ -392,8 +392,6 @@ http://fl2.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8|Referer=https://cookiewebpl
 http://fl2.moveonjoy.com/SHOWTIME_NEXT/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="USA (DADDY LIVE)" tvg-id="Showtime.Women.HD.-.Eastern.us" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-women-us.png?raw=true" tvg-name="Showtime Women",Showtime Women
 http://fl2.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
-#EXTINF:-1 tvg-id="SonyMovieChannel.us" tvg-name="Sony Movie Channel" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/sony-movie-channel-hz-us.png?raw=true" group-title="Movies",Sony Movie Channel
-http://cdn1host.online:2999/kratorius/opLcbhlXaT/1217
 #EXTINF:-1 group-title="UK (DADDY LIVE)" tvg-id="Sky.Arts.HD.uk" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-arts-uk.png" tvg-name="Sky Arts",Sky Arts
 https://xyzdddd.mizhls.ru/lb/premium683/index.m3u8|Referer=https://cookiewebplay.xyz/|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/132.0|Origin=https://cookiewebplay.xyz
 #EXTINF:-1 group-title="UK (DADDY LIVE)" tvg-id="Sky.Atlantic.HD.uk" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sky_Atlantic_-_Logo_2020.svg/2560px-Sky_Atlantic_-_Logo_2020.svg.png" tvg-name="Sky Atlantic",Sky Atlantic
