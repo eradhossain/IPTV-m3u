@@ -4,7 +4,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Input and output file names.
-input_file = "updated_tivimate_playlist.m3u8"
+input_file = "tivimate_playlist.m3u8"
 output_file = "links.m3u8"
 
 # Compile a regex to extract numbers from links like:
