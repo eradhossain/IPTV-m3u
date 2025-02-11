@@ -2,8 +2,8 @@ import re
 
 # Define file names.
 valid_links_file = "links.m3u8"                     # Contains valid links (one per line)
-input_playlist_file = "updated_tivimate_playlist.m3u8"
-output_playlist_file = "completed_tivimate_playlist.m3u8"
+input_playlist_file = "tivimate_playlist.m3u8"
+output_playlist_file = "tivimate_playlist.m3u8"
 
 # Step 1: Load valid links from valid_links_file into a dictionary.
 # We'll map the premium number (as a string) to the valid link.
