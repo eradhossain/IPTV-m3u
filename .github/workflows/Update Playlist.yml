@@ -24,10 +24,13 @@ jobs:
 
       - name: Validate links
         run: python all_channels/link_validator.py
+        working-directory: all_channels
+
 
       - name: Update playlist
         run: python all_channels/playlist_completor.py
-
+        working-directory: all_channels
+        
       - name: Commit and push changes
         run: |
           git config --global user.name "actions-user"
