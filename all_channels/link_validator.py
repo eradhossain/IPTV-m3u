@@ -14,7 +14,7 @@ if not os.path.exists(input_file):
     exit(1)
 
 # Compile a regex to extract numbers from links matching the pattern
-pattern = re.compile(r'https://ddh2new\.iosplayer\.ru/ddh2/premium(\d+)/mono\.m3u8')
+pattern = re.compile(r'premium(\d+)/mono\.m3u8')
 
 # Set to store unique extracted numbers
 extracted_numbers = set()
