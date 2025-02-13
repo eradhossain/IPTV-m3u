@@ -52,14 +52,17 @@ print(f"🔎 Total URLs to check: {len(url_list)}")
 # List to store valid links
 valid_links = []
 
+# Add a counter for skipped URLs
+skipped_count = 0  
+
 def check_url_with_retries(url):
     """
     Check the given URL using HEAD (and fallback GET) requests.
-    If a 429 is returned, retry after a delay until a 200 or 404 is received.
-    Returns a tuple (url, is_valid) where is_valid is True if the URL returned 200.
+    If a 429 is returned, retry up to 5 times before skipping.
     """
+    global skipped_count
     attempt = 0
-    while attempt < 5:  # Limit retries to prevent infinite loops
+    while attempt < 5:
         attempt += 1
         try:
             print(f"🌍 Checking: {url} (Attempt {attempt})")
@@ -93,6 +96,7 @@ def check_url_with_retries(url):
             return url, False
     
     print(f"⛔ Max retries reached for {url}. Skipping.")
+    skipped_count += 1  # Increment skipped counter
     return url, False
 
 # Use ThreadPoolExecutor to check URLs concurrently
@@ -105,6 +109,7 @@ with ThreadPoolExecutor(max_workers=max_workers) as executor:
             valid_links.append(url)
 
 print(f"✅ Total valid links: {len(valid_links)}")
+print(f"⛔ Total skipped URLs (max retries reached): {skipped_count}")
 
 # Write valid links to the output file
 with open(output_file, 'w', encoding='utf-8') as fout:
@@ -112,3 +117,4 @@ with open(output_file, 'w', encoding='utf-8') as fout:
         fout.write(link + "\n")
 
 print(f"🎉 Finished! Valid links have been written to {output_file}")
+
