@@ -62,7 +62,7 @@ def check_url_with_retries(url):
     """
     global skipped_count
     attempt = 0
-    while attempt < 5:
+    while attempt < 10:
         attempt += 1
         try:
             print(f"🌍 Checking: {url} (Attempt {attempt})")
