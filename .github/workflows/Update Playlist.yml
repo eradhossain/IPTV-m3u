@@ -29,7 +29,7 @@ jobs:
         run: cd all_channels && python link_validator.py
 
       - name: Update playlist
-        run: cd all_channels && python playlist_completor.py
+        run: cd all_channels && python playlist_completer.py
 
       - name: Commit and push changes
         run: |
