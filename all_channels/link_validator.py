@@ -33,12 +33,11 @@ print(f"✅ Extracted numbers: {extracted_numbers}")
 
 # URL templates where {num} will be replaced by the extracted number
 url_templates = [
-    "https://dokko1new.iosplayer.ru/dokko1/premium{num}/mono.m3u8",
-    "https://windnew.iosplayer.ru/wind/premium{num}/mono.m3u8",
-    "https://ddh2new.iosplayer.ru/ddh2/premium{num}/mono.m3u8",
-    "https://zekonew.iosplayer.ru/zeko/premium{num}/mono.m3u8",
-    "https://ddy6new.iosplayer.ru/ddy6/premium{num}/mono.m3u8",
-    "https://nfsnew.koskoros.ru/nfs/premium{num}/mono.m3u8"
+    "https://nfsnew.koskoros.ru/nfs/premium{num}/mono.m3u8",
+    "https://windnew.koskoros.ru/wind/premium{num}/mono.m3u8",
+    "https://zekonew.koskoros.ru/zeko/premium{num}/mono.m3u8",
+    "https://dokko1new.koskoros.ru/dokko1/premium{num}/mono.m3u8",
+
 ]
 
 # Build a list of all URLs to check
