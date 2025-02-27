@@ -59,15 +59,20 @@ skipped_count = 0
 def check_url_with_retries(url):
     """
     Check the given URL using HEAD (and fallback GET) requests.
-    If a 429 is returned, retry up to 5 times before skipping.
+    If a 429 is returned, retry up to 10 times before skipping.
     """
     global skipped_count
+    # Define headers with a User-Agent to mimic a browser
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     attempt = 0
     while attempt < 10:
         attempt += 1
         try:
             print(f"🌍 Checking: {url} (Attempt {attempt})")
-            response = requests.head(url, allow_redirects=True, timeout=10)
+            # Add headers to the HEAD request
+            response = requests.head(url, headers=headers, allow_redirects=True, timeout=10)
             
             if response.status_code == 200:
                 print(f"✅ {url} is valid (200).")
@@ -81,7 +86,8 @@ def check_url_with_retries(url):
                 continue  # Retry the request
             else:
                 print(f"⚠️ {url} returned unexpected status {response.status_code}. Trying GET...")
-                response = requests.get(url, allow_redirects=True, timeout=10, stream=True)
+                # Add headers to the GET request
+                response = requests.get(url, headers=headers, allow_redirects=True, timeout=10, stream=True)
                 
                 if response.status_code == 200:
                     print(f"✅ {url} is valid (200) on GET.")
