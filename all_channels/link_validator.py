@@ -3,6 +3,7 @@ import re
 import requests
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import random
 
 # Input and output file names
 input_file = "tivimate_playlist.m3u8"
@@ -37,7 +38,7 @@ url_templates = [
     "https://windnew.koskoros.ru/wind/premium{num}/mono.m3u8",
     "https://zekonew.koskoros.ru/zeko/premium{num}/mono.m3u8",
     "https://dokko1new.koskoros.ru/dokko1/premium{num}/mono.m3u8",
-
+    "https://ddy6new.koskoros.ru/ddy6/premium{num}/mono.m3u8"
 ]
 
 # Build a list of all URLs to check
@@ -55,6 +56,28 @@ valid_links = []
 # Add a counter for skipped URLs
 skipped_count = 0
 
+# Function to get a random proxy from the list
+def get_free_proxy():
+    proxy_list = [
+        'http://139.162.78.109:8080',    # Japan
+        'http://222.252.194.204:8080',   # Vietnam
+        'http://195.25.20.155:3128',     # France
+        'http://198.74.51.79:8888',      # USA
+        'http://51.68.175.56:1080',      # France
+        'http://45.61.159.42:3128',      # USA
+        'http://47.252.50.153:3128',     # USA
+        'http://63.32.1.88:3128',        # Ireland
+        'http://47.238.67.96:8888',      # Hong Kong
+        'http://3.21.101.158:3128',      # USA
+        'http://3.126.147.182:80',       # Germany
+        'http://43.135.78.162:30004',    # Hong Kong
+        'http://65.108.195.47:8080',     # Finland
+        'http://13.36.87.105:3128',      # France
+        'http://13.36.113.81:3128',      # France
+        'http://13.36.104.85:80'         # France
+    ]
+    return random.choice(proxy_list)
+
 def check_url_with_retries(url):
     """
     Check the given URL using HEAD (and fallback GET) requests.
@@ -66,12 +89,15 @@ def check_url_with_retries(url):
         'Origin': 'https://pkpakiplay.xyz',
         'Referer': 'https://pkpakiplay.xyz/'
     }
+    # Get a random proxy for this request
+    proxy = get_free_proxy()
+    proxies = {'http': proxy, 'https': proxy}
     attempt = 0
     while attempt < 10:
         attempt += 1
         try:
-            print(f"🌍 Checking: {url} (Attempt {attempt})")
-            response = requests.head(url, headers=headers, allow_redirects=True, timeout=10)
+            print(f"🌍 Checking: {url} (Attempt {attempt}) via {proxy}")
+            response = requests.head(url, headers=headers, proxies=proxies, allow_redirects=True, timeout=10)
 
             if response.status_code == 200:
                 print(f"✅ {url} is valid (200).")
@@ -80,12 +106,12 @@ def check_url_with_retries(url):
                 print(f"❌ {url} not found (404).")
                 return url, False
             elif response.status_code == 429:
-                print(f"⏳ {url} is rate-limited (429). Retrying in 5s...")
+                print(f"⏳ {url} rate-limited (429). Retrying in 5s...")
                 time.sleep(5)
                 continue  # Retry the request
             else:
                 print(f"⚠️ {url} returned unexpected status {response.status_code}. Trying GET...")
-                response = requests.get(url, headers=headers, allow_redirects=True, timeout=10, stream=True)
+                response = requests.get(url, headers=headers, proxies=proxies, allow_redirects=True, timeout=10, stream=True)
 
                 if response.status_code == 200:
                     print(f"✅ {url} is valid (200) on GET.")
