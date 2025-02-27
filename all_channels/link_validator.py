@@ -37,7 +37,8 @@ url_templates = [
     "https://windnew.iosplayer.ru/wind/premium{num}/mono.m3u8",
     "https://ddh2new.iosplayer.ru/ddh2/premium{num}/mono.m3u8",
     "https://zekonew.iosplayer.ru/zeko/premium{num}/mono.m3u8",
-    "https://ddy6new.iosplayer.ru/ddy6/premium{num}/mono.m3u8"
+    "https://ddy6new.iosplayer.ru/ddy6/premium{num}/mono.m3u8",
+    "https://nfsnew.koskoros.ru/nfs/premium{num}/mono.m3u8
 ]
 
 # Build a list of all URLs to check
