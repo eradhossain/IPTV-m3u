@@ -1,4 +1,4 @@
-name: Update Playlist
+name: Update Playlist 2
 
 on:
   schedule:
@@ -14,17 +14,28 @@ jobs:
         with:
           fetch-depth: 0  # Required for force push to work properly
 
+      - name: Set up virtual environment
+        run: |
+          python3 -m venv ~/myenv  # Create a virtual environment
+          source ~/myenv/bin/activate  # Activate the virtual environment
+
       - name: Install dependencies
-        run: pip3 install requests  # Use pip3 instead of relying on setup-python
+        run: |
+          source ~/myenv/bin/activate  # Activate the virtual environment
+          pip install requests  # Install dependencies in the virtual environment
 
       - name: Check files before validation
         run: ls -R all_channels  # Debug step to check if files exist
 
       - name: Validate links
-        run: cd all_channels && python3 link_validator.py  # Use python3 explicitly
+        run: |
+          source ~/myenv/bin/activate  # Activate the virtual environment
+          cd all_channels && python3 link_validator.py  # Use python3 explicitly
 
       - name: Update playlist
-        run: cd all_channels && python3 playlist_completer.py  # Use python3 explicitly
+        run: |
+          source ~/myenv/bin/activate  # Activate the virtual environment
+          cd all_channels && python3 playlist_completer.py  # Use python3 explicitly
 
       - name: Commit and push changes
         run: |
