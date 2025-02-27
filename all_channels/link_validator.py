@@ -54,7 +54,7 @@ print(f"🔎 Total URLs to check: {len(url_list)}")
 valid_links = []
 
 # Add a counter for skipped URLs
-skipped_count = 0  
+skipped_count = 0
 
 def check_url_with_retries(url):
     """
@@ -62,18 +62,18 @@ def check_url_with_retries(url):
     If a 429 is returned, retry up to 10 times before skipping.
     """
     global skipped_count
-    # Define headers with a User-Agent to mimic a browser
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
+        'Origin': 'https://pkpakiplay.xyz',
+        'Referer': 'https://pkpakiplay.xyz/'
     }
     attempt = 0
     while attempt < 10:
         attempt += 1
         try:
             print(f"🌍 Checking: {url} (Attempt {attempt})")
-            # Add headers to the HEAD request
             response = requests.head(url, headers=headers, allow_redirects=True, timeout=10)
-            
+
             if response.status_code == 200:
                 print(f"✅ {url} is valid (200).")
                 return url, True
@@ -86,9 +86,8 @@ def check_url_with_retries(url):
                 continue  # Retry the request
             else:
                 print(f"⚠️ {url} returned unexpected status {response.status_code}. Trying GET...")
-                # Add headers to the GET request
                 response = requests.get(url, headers=headers, allow_redirects=True, timeout=10, stream=True)
-                
+
                 if response.status_code == 200:
                     print(f"✅ {url} is valid (200) on GET.")
                     return url, True
@@ -101,7 +100,7 @@ def check_url_with_retries(url):
         except requests.RequestException as e:
             print(f"🚨 Request error for {url}: {e}.")
             return url, False
-    
+
     print(f"⛔ Max retries reached for {url}. Skipping.")
     skipped_count += 1  # Increment skipped counter
     return url, False
@@ -124,4 +123,3 @@ with open(output_file, 'w', encoding='utf-8') as fout:
         fout.write(link + "\n")
 
 print(f"🎉 Finished! Valid links have been written to {output_file}")
-
