@@ -25,6 +25,9 @@ jobs:
       - name: Check files before validation
         run: ls -R all_channels  # Debug step to check if files exist
 
+      - name: Validate links
+        run: cd all_channels && python link_validator.py
+
       - name: Update playlist
         run: cd all_channels && python playlist_completer.py
 
@@ -36,4 +39,3 @@ jobs:
           git add --all
           git diff --staged --quiet || git commit -m "Force update playlist"
           git push --force
-
