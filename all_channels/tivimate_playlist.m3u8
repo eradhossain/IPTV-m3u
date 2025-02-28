@@ -704,3 +704,29 @@ https://dokko1new.koskoros.ru/dokko1/premium587/mono.m3u8|Referer=https://pkpaki
 https://ddy6new.koskoros.ru/ddy6/premium55/mono.m3u8|Referer=https://pkpakiplay.xyz/|User-Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36|Origin=https://pkpakiplay.xyz
 #EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="PPV",NBA
 https://windnew.koskoros.ru/wind/premium68/mono.m3u8|Referer=https://pkpakiplay.xyz/|User-Agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36|Origin=https://pkpakiplay.xyz
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 1" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 1
+https://fl5.moveonjoy.com/NBA_1/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 2" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 2
+https://fl5.moveonjoy.com/NBA_2/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 3" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 3
+https://fl5.moveonjoy.com/NBA_3/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 4" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 4
+https://fl5.moveonjoy.com/NBA_4/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 5" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 5
+https://fl5.moveonjoy.com/NBA_5/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 6" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 6
+https://fl5.moveonjoy.com/NBA_6/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 7" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 7
+https://fl5.moveonjoy.com/NBA_7/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 8" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 8
+https://fl5.moveonjoy.com/NBA_8/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 9" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 9
+https://fl5.moveonjoy.com/NBA_9/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 10" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 10
+https://fl5.moveonjoy.com/NBA_10/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 11" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 11
+https://fl5.moveonjoy.com/NBA_11/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 12" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 12
+https://fl5.moveonjoy.com/NBA_12/index.m3u8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="NBA 13" tvg-logo="https://raw.githubusercontent.com/Josh9456/daddylive-m3u/refs/heads/main/Logos/nba-tv.png" group-title="NBA",NBA 13
+https://fl5.moveonjoy.com/NBA_13/index.m3u8
