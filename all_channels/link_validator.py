@@ -38,7 +38,6 @@ url_templates = [
     "https://zekonew.koskoros.ru/zeko/premium{num}/mono.m3u8",
     "https://dokko1new.koskoros.ru/dokko1/premium{num}/mono.m3u8",
     "https://ddy6new.koskoros.ru/ddy6/premium{num}/mono.m3u8"
-
 ]
 
 # Build a list of all URLs to check
@@ -63,16 +62,14 @@ def check_url_with_retries(url):
     """
     global skipped_count
     headers = {
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
-        'Origin': 'https://chimeracuddleplay.cfd',
-        'Referer': 'https://chimeracuddleplay.cfd/'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
     }
     attempt = 0
     while attempt < 10:
         attempt += 1
         try:
             print(f"🌍 Checking: {url} (Attempt {attempt})")
-            response = requests.head(url, headers=headers, allow_redirects=True, timeout=10)
+            response = requests.head(url, headers=headers, allow_redirects=True, timeout=30)
 
             if response.status_code == 200:
                 print(f"✅ {url} is valid (200).")
@@ -81,12 +78,13 @@ def check_url_with_retries(url):
                 print(f"❌ {url} not found (404).")
                 return url, False
             elif response.status_code == 429:
-                print(f"⏳ {url} is rate-limited (429). Retrying in 5s...")
-                time.sleep(5)
+                retry_after = response.headers.get('Retry-After', 'unknown')
+                print(f"⏳ {url} is rate-limited (429). Retrying in {retry_after}s...")
+                time.sleep(int(retry_after) if retry_after.isdigit() else 10)
                 continue  # Retry the request
             else:
                 print(f"⚠️ {url} returned unexpected status {response.status_code}. Trying GET...")
-                response = requests.get(url, headers=headers, allow_redirects=True, timeout=10, stream=True)
+                response = requests.get(url, headers=headers, allow_redirects=True, timeout=30, stream=True)
 
                 if response.status_code == 200:
                     print(f"✅ {url} is valid (200) on GET.")
@@ -106,7 +104,7 @@ def check_url_with_retries(url):
     return url, False
 
 # Use ThreadPoolExecutor to check URLs concurrently
-max_workers = 10  # Adjust as needed
+max_workers = 5  # Reduced number of concurrent workers to avoid hitting rate limits
 with ThreadPoolExecutor(max_workers=max_workers) as executor:
     future_to_url = {executor.submit(check_url_with_retries, url): url for url in url_list}
     for future in as_completed(future_to_url):
