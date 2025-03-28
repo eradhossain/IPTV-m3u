@@ -63,9 +63,9 @@ def check_url_with_retries(url):
     """
     global skipped_count
     headers = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
-        'Origin': 'https://pkpakiplay.xyz',
-        'Referer': 'https://pkpakiplay.xyz/'
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+        'Origin': 'https://chimeracuddleplay.cfd',
+        'Referer': 'https://chimeracuddleplay.cfd/'
     }
     attempt = 0
     while attempt < 10:
