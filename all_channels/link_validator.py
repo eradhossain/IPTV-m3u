@@ -33,11 +33,11 @@ print(f"✅ Extracted numbers: {extracted_numbers}")
 
 # URL templates where {num} will be replaced by the extracted number
 url_templates = [
-    "https://nfsnew.koskoros.ru/nfs/premium{num}/mono.m3u8",
-    "https://windnew.koskoros.ru/wind/premium{num}/mono.m3u8",
-    "https://zekonew.koskoros.ru/zeko/premium{num}/mono.m3u8",
-    "https://dokko1new.koskoros.ru/dokko1/premium{num}/mono.m3u8",
-    "https://ddy6new.koskoros.ru/ddy6/premium{num}/mono.m3u8"
+    "https://nfsnew.newkso.ru/nfs/premium{num}/mono.m3u8",
+    "https://windnew.newkso.ru/wind/premium{num}/mono.m3u8",
+    "https://zekonew.newkso.ru/zeko/premium{num}/mono.m3u8",
+    "https://dokko1new.newkso.ru/dokko1/premium{num}/mono.m3u8",
+    "https://ddy6new.newkso.ru/ddy6/premium{num}/mono.m3u8"
 
 ]
 
@@ -64,8 +64,8 @@ def check_url_with_retries(url):
     global skipped_count
     headers = {
         'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
-        'Origin': 'https://chimeracuddleplay.cfd',
-        'Referer': 'https://chimeracuddleplay.cfd/'
+        'Origin': 'https://webxzplay.cfd',
+        'Referer': 'https://webxzplay.cfd/'
     }
     attempt = 0
     while attempt < 10:
