@@ -63,9 +63,9 @@ def check_url_with_retries(url):
     """
     global skipped_count
     headers = {
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
-        'Origin': 'https://webxzplay.cfd',
-        'Referer': 'https://webxzplay.cfd/'
+        'User-Agent': 'User-Agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+        'Origin': 'https://caq21harderv991gpluralplay.xyz',
+        'Referer': 'https://caq21harderv991gpluralplay.xyz/'
     }
     attempt = 0
     while attempt < 10:
