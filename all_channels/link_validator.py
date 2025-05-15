@@ -64,8 +64,8 @@ def check_url_with_retries(url):
     global skipped_count
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
-        'Origin': 'https://caq21harderv991gpluralplay.xyz',
-        'Referer': 'https://caq21harderv991gpluralplay.xyz/'
+        'Origin': 'https://forcedtoplay.xyz',
+        'Referer': 'https://forcedtoplay.xyz/'
     }
     attempt = 0
     while attempt < 10:
