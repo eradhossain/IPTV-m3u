@@ -63,7 +63,7 @@ def check_url_with_retries(url):
     """
     global skipped_count
     headers = {
-        'User-Agent': 'User-Agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1',
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36',
         'Origin': 'https://caq21harderv991gpluralplay.xyz',
         'Referer': 'https://caq21harderv991gpluralplay.xyz/'
     }
