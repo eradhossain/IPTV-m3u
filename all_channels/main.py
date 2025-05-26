@@ -1,72 +1,55 @@
-# main.py (final with strict enforcement + logging)
 import os
 import re
 import sys
 import time
 import base64
 import requests
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 CHANNELS_URL = 'https://josh9456-myproxy.hf.space/playlist/channels'
-PREMIUM = re.compile(r'premium(\d+)/mono\.m3u8')
 PROXY_PREFIX = 'https://josh9456-myproxy.hf.space/watch/'
+PREMIUM = re.compile(r'premium(\d+)/mono\.m3u8')
 
-# 1. Fetch channels
+URL_TEMPLATES = [
+    "https://nfsnew.newkso.ru/nfs/premium{num}/mono.m3u8",
+    "https://windnew.newkso.ru/wind/premium{num}/mono.m3u8",
+    "https://zekonew.newkso.ru/zeko/premium{num}/mono.m3u8",
+    "https://dokko1new.newkso.ru/dokko1/premium{num}/mono.m3u8",
+    "https://ddy6new.newkso.ru/ddy6/premium{num}/mono.m3u8"
+]
+
+# 1. Download latest channels.m3u8
 
 def fetch_channels(dest='channels.m3u8'):
-    print(f"⬇️ Fetching channels from {CHANNELS_URL}")
-    try:
-        r = requests.get(CHANNELS_URL, timeout=10)
-        if r.status_code == 200:
-            with open(dest, 'wb') as f:
-                f.write(r.content)
-            print(f"✅ {dest} updated")
-        else:
-            print(f"❌ HTTP {r.status_code} from proxy server")
-            sys.exit(1)
-    except Exception as e:
-        print(f"❌ Download error: {e}")
-        sys.exit(1)
+    print("⬇ Downloading channels.m3u8...")
+    r = requests.get(CHANNELS_URL, timeout=10)
+    r.raise_for_status()
+    with open(dest, 'wb') as f:
+        f.write(r.content)
+    print("✅ Downloaded and saved.")
 
-# 2. Validate decoded stream URLs from proxy format
+# 2. Decode base64 URLs from tivimate_playlist and validate variants
 
 def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
-    if not os.path.exists(src):
-        print(f"❌ {src} missing.")
-        sys.exit(1)
-
-    decoded_urls = set()
     with open(src) as f:
-        for line in f:
-            line = line.strip()
-            if line.startswith(PROXY_PREFIX):
-                try:
-                    b64 = line[len(PROXY_PREFIX):].split('.m3u8')[0]
-                    decoded = base64.b64decode(b64).decode().strip()
-                    decoded_urls.add(decoded)
-                except Exception as e:
-                    print(f"⚠️ Decode error: {e} in line {line}")
-            elif PREMIUM.search(line):
-                decoded_urls.add(line)
+        lines = f.readlines()
 
-    ids = {match.group(1) for u in decoded_urls if (match := PREMIUM.search(u))}
-    if not ids:
-        print("⚠️ No premium IDs found from proxy or raw links.")
-        sys.exit(1)
+    decoded_urls = []
+    for line in lines:
+        if line.strip().startswith(PROXY_PREFIX):
+            try:
+                b64 = line.strip().split('/watch/')[1].split('.m3u8')[0]
+                decoded = base64.b64decode(b64).decode().strip()
+                decoded_urls.append(decoded)
+            except Exception as e:
+                print(f"⚠️ Failed to decode {line.strip()}: {e}")
 
+    ids = {m.group(1) for u in decoded_urls if (m := PREMIUM.search(u))}
+    print(f"🔎 Found {len(ids)} premium IDs: {ids}")
 
-    print(f"✅ Premium IDs extracted: {ids}")
+    candidates = [t.format(num=i) for i in ids for t in URL_TEMPLATES]
+    print(f"🔍 Validating {len(candidates)} URLs")
 
-    templates = [
-        'https://nfsnew.newkso.ru/nfs/premium{}/mono.m3u8',
-        'https://windnew.newkso.ru/wind/premium{}/mono.m3u8',
-        'https://zekonew.newkso.ru/zeko/premium{}/mono.m3u8',
-        'https://dokko1new.newkso.ru/dokko1/premium{}/mono.m3u8',
-        'https://ddy6new.newkso.ru/ddy6/premium{}/mono.m3u8'
-    ]
-    candidates = [t.format(i) for i in ids for t in templates]
-
-    print(f"🔎 Validating {len(candidates)} URLs")
     valid = []
 
     def check(url):
@@ -88,82 +71,70 @@ def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
                 return None
         return None
 
-    with ThreadPoolExecutor(10) as ex:
-        for result in ex.map(check, candidates):
+    with ThreadPoolExecutor(10) as pool:
+        for result in pool.map(check, candidates):
             if result:
                 valid.append(result)
 
     with open(out, 'w') as f:
         f.write('\n'.join(valid))
+    print(f"✅ Saved {len(valid)} validated URLs to {out}")
 
-    print(f"🎉 {len(valid)} valid URLs written to {out}")
+# 3. Match channels.m3u8 decoded URLs with validated links
 
-# 3. Map decoded URLs to proxy entries
-
-def build_proxy_map(channels='channels.m3u8'):
-    proxy_map = {}
+def build_proxy_map(channels='channels.m3u8', valid_file='links.m3u8'):
+    valid_links = set(open(valid_file).read().splitlines())
     lines = open(channels).read().splitlines()
-    for i in range(len(lines)-1):
+
+    proxy_map = {}  # original decoded → proxy base64 URL
+    for i in range(len(lines) - 1):
         if lines[i].startswith('#EXTINF'):
             extinf = lines[i]
-            stream = lines[i+1].strip()
-            if '/watch/' in stream:
+            proxy = lines[i+1].strip()
+            if '/watch/' in proxy:
                 try:
-                    b64 = stream.split('/watch/')[1].split('.m3u8')[0]
-                    original = base64.b64decode(b64).decode().strip()
-                    proxy_map[original] = (extinf, stream)
+                    b64 = proxy.split('/watch/')[1].split('.m3u8')[0]
+                    decoded = base64.b64decode(b64).decode().strip()
+                    if decoded in valid_links:
+                        proxy_map[decoded] = (extinf, proxy)
                 except:
                     continue
-    print(f"✅ Loaded {len(proxy_map)} proxy mappings")
+    print(f"✅ Proxy map created: {len(proxy_map)} matched entries")
     return proxy_map
 
-# 4. Assemble playlist with proxy-only strict replacement
+# 4. Rewrite tivimate_playlist.m3u8 with matched proxy entries only
 
-def assemble(src='tivimate_playlist.m3u8', links='links.m3u8', channels='channels.m3u8'):
-    valid = set(open(links).read().splitlines())
-    proxy_map = build_proxy_map(channels)
-
-    log_valid = []
-    log_missing = []
-    out = []
-
+def rewrite_playlist(src='tivimate_playlist.m3u8', proxy_map=None):
     lines = open(src).read().splitlines()
+    out = []
     i = 0
+    replaced = 0
     while i < len(lines):
         line = lines[i]
-        if line.startswith('#EXTINF') and i+1 < len(lines):
-            url_line = lines[i+1].strip()
-            decoded = None
-            if url_line.startswith(PROXY_PREFIX):
+        if line.startswith('#EXTINF') and i + 1 < len(lines):
+            stream_line = lines[i + 1].strip()
+            if stream_line.startswith(PROXY_PREFIX):
                 try:
-                    b64 = url_line[len(PROXY_PREFIX):].split('.m3u8')[0]
+                    b64 = stream_line.split('/watch/')[1].split('.m3u8')[0]
                     decoded = base64.b64decode(b64).decode().strip()
+                    if decoded in proxy_map:
+                        ext, proxy_url = proxy_map[decoded]
+                        out.append(ext)
+                        out.append(proxy_url)
+                        replaced += 1
                 except:
-                    decoded = None
-            if decoded and decoded in valid and decoded in proxy_map:
-                ext, proxy_url = proxy_map[decoded]
-                out.append(ext)
-                out.append(proxy_url)
-                log_valid.append(decoded)
-            else:
-                log_missing.append(decoded or url_line)
+                    pass
             i += 2
         else:
             i += 1
 
     with open(src, 'w') as f:
         f.write('\n'.join(out) + '\n')
-
-    print(f"✅ Replaced {len(log_valid)} entries with proxies")
-    if log_missing:
-        print(f"⚠️ Skipped {len(log_missing)} entries (not validated or missing from proxy map)")
-        with open('missing_proxies.txt', 'w') as m:
-            m.write('\n'.join(log_missing))
+    print(f"✅ Rewrote playlist with {replaced} valid proxy entries")
 
 if __name__ == '__main__':
     fetch_channels()
-    print('=== Validating Stream Links ===')
     validate_links()
-    print('=== Rewriting Playlist ===')
-    assemble()
-    print('✅ Done — Playlist updated with proxies only')
+    proxy_map = build_proxy_map()
+    rewrite_playlist(proxy_map=proxy_map)
+    print("✅ Done.")
