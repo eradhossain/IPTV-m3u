@@ -1,4 +1,4 @@
-# main.py (final with full proxy metadata replacement)
+# main.py (final with base64 proxy decoding for validation)
 import os
 import re
 import sys
@@ -10,10 +10,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # Files in Git:
 # - tivimate_playlist.m3u8 (input, overwritten)
 # - links.m3u8 (validated URLs)
-# - channels.m3u8 (proxy EXTINF+URL entries)
+# - channels.m3u8 (proxy mappings)
 
 CHANNELS_URL = 'https://josh9456-myproxy.hf.space/playlist/channels'
 PREMIUM = re.compile(r'premium(\d+)/mono\.m3u8')
+PROXY_PREFIX = 'https://josh9456-myproxy.hf.space/watch/'
 
 # 1. Fetch channels.m3u8
 def fetch_channels(dest='channels.m3u8'):
@@ -31,16 +32,39 @@ def fetch_channels(dest='channels.m3u8'):
         print(f"❌ Fetch error: {e}")
         sys.exit(1)
 
-# 2. Validate premium URLs
+# 2. Validate premium URLs (with proxy base64 decode)
 def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
     if not os.path.exists(src):
         print(f"❌ {src} missing.")
         sys.exit(1)
-    ids = set(PREMIUM.findall(open(src).read()))
+
+    decoded_urls = set()
+
+    with open(src, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith(PROXY_PREFIX):
+                try:
+                    b64 = line[len(PROXY_PREFIX):].split('.m3u8')[0]
+                    decoded = base64.b64decode(b64).decode().strip()
+                    decoded_urls.add(decoded)
+                except Exception as e:
+                    print(f"⚠️ Could not decode base64 in line: {line} — {e}")
+            elif PREMIUM.search(line):
+                decoded_urls.add(line)
+
+    ids = set()
+    for url in decoded_urls:
+        match = PREMIUM.search(url)
+        if match:
+            ids.add(match.group(1))
+
     if not ids:
-        print("⚠️ No premium IDs.")
+        print("⚠️ No premium IDs found after decoding.")
         sys.exit(1)
-    print(f"✅ IDs: {ids}")
+
+    print(f"✅ Extracted Premium IDs: {ids}")
+
     templates = [
         'https://nfsnew.newkso.ru/nfs/premium{}/mono.m3u8',
         'https://windnew.newkso.ru/wind/premium{}/mono.m3u8',
@@ -48,13 +72,14 @@ def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
         'https://dokko1new.newkso.ru/dokko1/premium{}/mono.m3u8',
         'https://ddy6new.newkso.ru/ddy6/premium{}/mono.m3u8'
     ]
+
     candidates = [t.format(i) for i in ids for t in templates]
     valid = []
     print(f"🔎 Checking {len(candidates)} URLs")
 
     def check(u):
-        headers = {'User-Agent':'Mozilla/5.0'}
-        for i in range(1,6):
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        for i in range(1, 6):
             print(f"🌍 {u} (try {i})")
             try:
                 r = requests.head(u, headers=headers, allow_redirects=True, timeout=10)
@@ -65,7 +90,6 @@ def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
                     continue
                 if r.status_code == 404:
                     return None
-                # fallback
                 r = requests.get(u, headers=headers, timeout=10)
                 if r.status_code == 200:
                     return u
@@ -94,7 +118,6 @@ def build_proxy_map(channels='channels.m3u8'):
             ext = line
             url = lines[i+1]
             if '/watch/' in url:
-                # decode base64 token
                 b64 = url.split('/watch/')[1].split('.m3u8')[0]
                 try:
                     orig = base64.b64decode(b64).decode().strip()
@@ -108,7 +131,6 @@ def build_proxy_map(channels='channels.m3u8'):
 def assemble(src='tivimate_playlist.m3u8',
              links='links.m3u8',
              channels='channels.m3u8'):
-    # load validated URLs
     valid = set(open(links).read().splitlines())
     proxy_map = build_proxy_map(channels)
 
@@ -119,13 +141,19 @@ def assemble(src='tivimate_playlist.m3u8',
         line = lines[i]
         if line.startswith('#EXTINF') and i+1 < len(lines):
             url_line = lines[i+1]
-            if url_line in valid and url_line in proxy_map:
-                ext, proxy_url = proxy_map[url_line]
+            original_url = url_line
+            if url_line.startswith(PROXY_PREFIX):
+                try:
+                    b64 = url_line[len(PROXY_PREFIX):].split('.m3u8')[0]
+                    original_url = base64.b64decode(b64).decode().strip()
+                except:
+                    pass
+            if original_url in valid and original_url in proxy_map:
+                ext, proxy_url = proxy_map[original_url]
                 out.append(ext)
                 out.append(proxy_url)
                 i += 2
                 continue
-        # default: copy line
         out.append(line)
         i += 1
 
