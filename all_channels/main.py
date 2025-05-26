@@ -42,15 +42,18 @@ def validate_links(src='tivimate_playlist.m3u8', out='links.m3u8'):
             if line.startswith(PROXY_PREFIX):
                 try:
                     b64 = line[len(PROXY_PREFIX):].split('.m3u8')[0]
-                    url = base64.b64decode(b64).decode().strip()
-                    decoded_urls.add(url)
+                    decoded = base64.b64decode(b64).decode().strip()
+                    decoded_urls.add(decoded)
                 except Exception as e:
                     print(f"⚠️ Decode error: {e} in line {line}")
+            elif PREMIUM.search(line):
+                decoded_urls.add(line)
 
     ids = {match.group(1) for u in decoded_urls if (match := PREMIUM.search(u))}
     if not ids:
-        print("⚠️ No premium IDs after decode.")
+        print("⚠️ No premium IDs found from proxy or raw links.")
         sys.exit(1)
+
 
     print(f"✅ Premium IDs extracted: {ids}")
 
